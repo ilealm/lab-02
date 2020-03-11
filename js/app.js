@@ -6,13 +6,22 @@ function Animal(obj){
   this.horns = obj.horns;
 }
 
+Animal.prototype.render = function(){
+  const myTemplate = $('#photo-template').html();
+  const $newSection = $('<section></section>');
+  $newSection.html(myTemplate);
+  $newSection.find('h2').text(this.title);
+  $newSection.find('img').attr('src', this.image_url);
+  $newSection.find('p').text(this.description);
+  $('main').append($newSection);
+}
 
 function loadAnimals(){
 // Retrive info from file with ajax
   $.ajax('/data/page-1.json', {method:'GET', dataType: 'JSON'})
     .then( eleObj => {
       eleObj.forEach(element => {
-        console.log(new Animal(element));
+        (new Animal(element).render());
       });
     })
 }
