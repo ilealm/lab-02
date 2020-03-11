@@ -1,9 +1,20 @@
+'use strict'
+
+// Global variables
+let arrKeywords = [];
+
+
+
+
+// Constructor function
+
 function Animal(obj){
   this.image_url = obj.image_url;
   this.title = obj.title;
   this.description = obj.description;
   this.keyword = obj.keyword;
   this.horns = obj.horns;
+
 }
 
 Animal.prototype.render = function(){
@@ -15,6 +26,10 @@ Animal.prototype.render = function(){
   $newSection.find('p').text(this.description);
   $('main').append($newSection);
 }
+function populateArrKeywords(keyword){
+  arrKeywords.includes(keyword) 
+
+}
 
 function loadAnimals(){
 // Retrive info from file with ajax
@@ -22,6 +37,7 @@ function loadAnimals(){
     .then( eleObj => {
       eleObj.forEach(element => {
         (new Animal(element).render());
+        populateArrKeywords(element.keyword);
       });
     })
 }
