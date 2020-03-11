@@ -8,6 +8,8 @@ Feature 1: Display Images
 10:25am 
 
 # Finish time
+11:11
 
 # Actual time needed to complete
+46 min
 
