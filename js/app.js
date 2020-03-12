@@ -19,13 +19,16 @@ function Animal(obj){
 
 Animal.prototype.render = function(){
   const myTemplate = $('#photo-template').html();
-  const $newSection = $('<section></section>');
+  // const $newSection = $('<section></section>');
+  const $newSection = $(`<section id=${this.keyword}></section>`);
   $newSection.html(myTemplate);
   $newSection.find('h2').text(this.title);
   $newSection.find('img').attr('src', this.image_url);
   $newSection.find('p').text(this.description);
   $('main').append($newSection);
 }
+
+// imageClone.attr('class', this.keyword);
 
 function populateArrKeywords(keyword) {
   if( !arrKeywords.includes(keyword) ) {
@@ -52,11 +55,24 @@ function populateDropbox() {
     });
 }
 
+// Event listener
+
+$(() => {
+  $('select').on('change', function() {
+    // console.log(this.value);
+    if (this.value === 'all') {
+      $('section').show();
+      $('#photo-template').hide();
+    } else if (this.value !== 'default') {
+      $('section').hide();
+      $(`section[id="${this.value}"]`).show();
+    }
+  });
+});
 
 // retrieve the data from the file, but until is loaded
 $().ready(() => {
   console.log ('Page loaded');
   loadAnimals();
-}
-)
+});
 
