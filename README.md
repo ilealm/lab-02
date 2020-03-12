@@ -9,6 +9,9 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * Any Links you used as reference
+google font used:
+`"https://fonts.googleapis.com/css?family=Lobster&display=swap" `
+`"https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap"`
 
 ### Setup
 
