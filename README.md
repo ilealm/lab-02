@@ -4,7 +4,7 @@
 
 I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
 
-### Author(s): Iris Leal Moldonado, Thomas Sherer (Collaborators on her repo)
+### Author(s): Iris Leal Maldonado, Thomas Sherer (Collaborators on her repo)
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
@@ -59,16 +59,16 @@ Feature 2: Filter Images
     90 min.
 
 # Number and name of Feature
-Feature #: FEATURE DESCRIPTION
+Feature #: Style the Application
 
 	# Estimate of time needed to complete
-	NN
+	1h
 
 	# Start time
-	NN am
+	8:05 am
 
 	# Finish time
-	## am
+	8:40 am
 
 	# Actual time needed to complete
-	NN min
+	35 min
