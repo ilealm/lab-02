@@ -26,9 +26,11 @@ Animal.prototype.render = function(){
   $newSection.find('p').text(this.description);
   $('main').append($newSection);
 }
-function populateArrKeywords(keyword){
-  arrKeywords.includes(keyword) 
 
+function populateArrKeywords(keyword) {
+  if( !arrKeywords.includes(keyword) ) {
+    arrKeywords.push(keyword);
+  }
 }
 
 function loadAnimals(){
@@ -39,10 +41,16 @@ function loadAnimals(){
         (new Animal(element).render());
         populateArrKeywords(element.keyword);
       });
+      populateDropbox();
     })
 }
 
-
+function populateDropbox() {
+    arrKeywords.forEach(key => {
+      let $option = $(`<option class="${key}">${key}</option>`);
+      $('#list').append($option);
+    });
+}
 
 
 // retrieve the data from the file, but until is loaded
@@ -51,3 +59,4 @@ $().ready(() => {
   loadAnimals();
 }
 )
+
