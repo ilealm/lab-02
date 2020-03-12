@@ -53,10 +53,10 @@ Feature 2: Filter Images
     11:40 am 
 
     # Finish time
-    NN
+    8:15 pm
 
     # Actual time needed to complete
-    NN min.
+    90 min.
 
 # Number and name of Feature
 Feature #: FEATURE DESCRIPTION
