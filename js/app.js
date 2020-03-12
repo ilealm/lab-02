@@ -38,7 +38,7 @@ function populateArrKeywords(keyword) {
 
 function loadAnimals(){
 // Retrive info from file with ajax
-  $.ajax('/data/page-1.json', {method:'GET', dataType: 'JSON'})
+  $.ajax('data/page-1.json', {method:'GET', dataType: 'JSON'})
     .then( eleObj => {
       eleObj.forEach(element => {
         (new Animal(element).render());
@@ -49,10 +49,10 @@ function loadAnimals(){
 }
 
 function populateDropbox() {
-    arrKeywords.forEach(key => {
-      let $option = $(`<option class="${key}">${key}</option>`);
-      $('#list').append($option);
-    });
+  arrKeywords.forEach(key => {
+    let $option = $(`<option class="${key}">${key}</option>`);
+    $('#list').append($option);
+  });
 }
 
 // Event listener
